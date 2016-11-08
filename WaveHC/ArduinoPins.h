@@ -312,10 +312,155 @@
 #define PIN68_PINREG PINK
 #define PIN69_PINREG PINK
 
-#elif defined (__AVR_ATmega644P__)
+#elif defined (__AVR_ATmega1284P__) || defined(__AVR_ATmega644P__)
 // Sanguino
 
-#error Sanguino not defined
+// Two Wire (aka I2C) ports
+#define SDA_PIN 17
+#define SCL_PIN 16
+
+// SPI port
+#define SS_PIN 4
+#define MOSI_PIN 5
+#define MISO_PIN 6
+#define SCK_PIN 7
+
+// bit number for digital pins
+#define PIN0_BITNUM 0
+#define PIN1_BITNUM 1
+#define PIN2_BITNUM 2
+#define PIN3_BITNUM 3
+#define PIN4_BITNUM 4
+#define PIN5_BITNUM 5
+#define PIN6_BITNUM 6
+#define PIN7_BITNUM 7
+#define PIN8_BITNUM 0
+#define PIN9_BITNUM 1
+#define PIN10_BITNUM 2
+#define PIN11_BITNUM 3
+#define PIN12_BITNUM 4
+#define PIN13_BITNUM 5
+#define PIN14_BITNUM 6
+#define PIN15_BITNUM 7
+#define PIN16_BITNUM 0
+#define PIN17_BITNUM 1
+#define PIN18_BITNUM 2
+#define PIN19_BITNUM 3
+#define PIN20_BITNUM 4
+#define PIN21_BITNUM 5
+#define PIN22_BITNUM 6
+#define PIN23_BITNUM 7
+#define PIN24_BITNUM 7
+#define PIN25_BITNUM 6
+#define PIN26_BITNUM 5
+#define PIN27_BITNUM 4
+#define PIN28_BITNUM 3
+#define PIN29_BITNUM 2
+#define PIN30_BITNUM 1
+#define PIN31_BITNUM 0
+
+// output register for all pins
+#define PIN0_PORTREG PORTB
+#define PIN1_PORTREG PORTB
+#define PIN2_PORTREG PORTB
+#define PIN3_PORTREG PORTB
+#define PIN4_PORTREG PORTB
+#define PIN5_PORTREG PORTB
+#define PIN6_PORTREG PORTB
+#define PIN7_PORTREG PORTB
+#define PIN8_PORTREG PORTD
+#define PIN9_PORTREG PORTD
+#define PIN10_PORTREG PORTD
+#define PIN11_PORTREG PORTD
+#define PIN12_PORTREG PORTD
+#define PIN13_PORTREG PORTD
+#define PIN14_PORTREG PORTD
+#define PIN15_PORTREG PORTD
+#define PIN16_PORTREG PORTC
+#define PIN17_PORTREG PORTC
+#define PIN18_PORTREG PORTC
+#define PIN19_PORTREG PORTC
+#define PIN20_PORTREG PORTC
+#define PIN21_PORTREG PORTC
+#define PIN22_PORTREG PORTC
+#define PIN23_PORTREG PORTC
+#define PIN24_PORTREG PORTA
+#define PIN25_PORTREG PORTA
+#define PIN26_PORTREG PORTA
+#define PIN27_PORTREG PORTA
+#define PIN28_PORTREG PORTA
+#define PIN29_PORTREG PORTA
+#define PIN30_PORTREG PORTA
+#define PIN31_PORTREG PORTA
+
+// direction control register for digital pins
+#define PIN0_DDRREG DDRB
+#define PIN1_DDRREG DDRB
+#define PIN2_DDRREG DDRB
+#define PIN3_DDRREG DDRB
+#define PIN4_DDRREG DDRB
+#define PIN5_DDRREG DDRB
+#define PIN6_DDRREG DDRB
+#define PIN7_DDRREG DDRB
+#define PIN8_DDRREG DDRD
+#define PIN9_DDRREG DDRD
+#define PIN10_DDRREG DDRD
+#define PIN11_DDRREG DDRD
+#define PIN12_DDRREG DDRD
+#define PIN13_DDRREG DDRD
+#define PIN14_DDRREG DDRD
+#define PIN15_DDRREG DDRD
+#define PIN16_DDRREG DDRC
+#define PIN17_DDRREG DDRC
+#define PIN18_DDRREG DDRC
+#define PIN19_DDRREG DDRC
+#define PIN20_DDRREG DDRC
+#define PIN21_DDRREG DDRC
+#define PIN22_DDRREG DDRC
+#define PIN23_DDRREG DDRC
+#define PIN24_DDRREG DDRA
+#define PIN25_DDRREG DDRA
+#define PIN26_DDRREG DDRA
+#define PIN27_DDRREG DDRA
+#define PIN28_DDRREG DDRA
+#define PIN29_DDRREG DDRA
+#define PIN30_DDRREG DDRA
+#define PIN31_DDRREG DDRA
+
+// input register for digital pins
+#define PIN0_PINREG PINB
+#define PIN1_PINREG PINB
+#define PIN2_PINREG PINB
+#define PIN3_PINREG PINB
+#define PIN4_PINREG PINB
+#define PIN5_PINREG PINB
+#define PIN6_PINREG PINB
+#define PIN7_PINREG PINB
+#define PIN8_PINREG PIND
+#define PIN9_PINREG PIND
+#define PIN10_PINREG PIND
+#define PIN11_PINREG PIND
+#define PIN12_PINREG PIND
+#define PIN13_PINREG PIND
+#define PIN14_PINREG PIND
+#define PIN15_PINREG PIND
+#define PIN16_PINREG PINC
+#define PIN17_PINREG PINC
+#define PIN18_PINREG PINC
+#define PIN19_PINREG PINC
+#define PIN20_PINREG PINC
+#define PIN21_PINREG PINC
+#define PIN22_PINREG PINC
+#define PIN23_PINREG PINC
+#define PIN24_PINREG PINA
+#define PIN25_PINREG PINA
+#define PIN26_PINREG PINA
+#define PIN27_PINREG PINA
+#define PIN28_PINREG PINA
+#define PIN29_PINREG PINA
+#define PIN30_PINREG PINA
+#define PIN31_PINREG PINA
+
 
 #else // defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
 // 168 and 328 Arduinos
@@ -325,7 +470,7 @@
 #define SCL_PIN 19
 
 // SPI port
-#define SS_PIN 10
+#define SS_PIN 5
 #define MOSI_PIN 11
 #define MISO_PIN 12
 #define SCK_PIN 13
